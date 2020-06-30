@@ -10,18 +10,20 @@ class Counter extends React.Component{
     constructor(){
         super();
         this.state = {count: 0};
-
-        this.increment = this.increment.bind(this)
     }
-    increment(e){
-        this.setState((state, v)=>({
-            count: state.count + 1
+    increment = (e,v) => {        
+        e.preventDefault();    
+        var n = parseInt(v);
+        this.setState((state)=>({
+            count: state.count + n
         }));
+        
+        console.log(this.state.count)
     }
     render(){
         return (
             <div>
-                <input type="button" onClick={this.increment} value="hit me" />
+                <input type="button" onClick={(e) => this.increment(e,2)} value="hit me" />
                 <label>{this.state.count}</label>
             </div>
         );
