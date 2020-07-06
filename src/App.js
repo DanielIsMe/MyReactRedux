@@ -1,14 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import First from './first';
-import Second from './second';
 
 function App() {
+  const products = [
+    {ID: 1, Name:'p1', Colour: 'red'},
+    {ID: 2, Name:'p2', Colour: 'white'},
+    {ID: 3, Name:'p3', Colour: 'black'},
+    {ID: 4, Name:'p4', Colour: 'black'},
+    {ID: 5, Name:'p5', Colour: 'black'},
+  ];
+
   return (
-    <div className="App">
-      <Second />
-      <First />
+    <div className="App">      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -26,5 +30,4 @@ function App() {
     </div>
   );
 }
-setInterval(First, 1000);
 export default App;
