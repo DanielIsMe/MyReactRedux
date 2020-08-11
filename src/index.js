@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import FormCon from './form.js'
 import Game1 from './Game.js'
 
 ReactDOM.render(
-  <Game1 />,
+  <FormCon />,
   document.getElementById('root')
 );
